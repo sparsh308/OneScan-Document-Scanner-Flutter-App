@@ -186,12 +186,15 @@ class _MainPageWidgetState extends State<MainPageWidget> {
             ),
             ListTile(
               title: Text(
-                'Option 1',
+                'Open Recent Created PDFs',
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // Update the state of the app.
+                Navigator.pop(context);
+
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => FileEx()));
                 // ...
               },
             ),
