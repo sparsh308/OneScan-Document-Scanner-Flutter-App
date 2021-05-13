@@ -67,12 +67,15 @@ class _DocumentPreviewState extends State<DocumentPreview> {
                       pageView = PageWidget(
                           _pages[position].documentPreviewImageFileUri!);
                     }
-                    return GridTile(
-                      child: GestureDetector(
-                          onTap: () {
-                            _showOperationsPage(_pages[position]);
-                          },
-                          child: pageView),
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GridTile(
+                        child: GestureDetector(
+                            onTap: () {
+                              _showOperationsPage(_pages[position]);
+                            },
+                            child: pageView),
+                      ),
                     );
                   },
                   itemCount: _pages.length),

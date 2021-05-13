@@ -202,84 +202,76 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                onPressed:
-                () {
-                  return showDialog(
-                      context: (context),
-                      builder: (context) {
-                        return AlertDialog(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          content: Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 140,
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text(
-                                        "Specs",
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20),
-                                      ),
+                Navigator.pop(context);
+                showDialog(
+                    context: (context),
+                    builder: (context) {
+                      return AlertDialog(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        content: Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 140,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FittedBox(
+                                    fit: BoxFit.fitWidth,
+                                    child: Text(
+                                      "One",
+                                      style: GoogleFonts.pacifico(
+                                          color: Colors.black, fontSize: 25),
                                     ),
-                                    FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text(
-                                        "OCR",
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 23,
-                                            color:
-                                                Theme.of(context).accentColor),
-                                      ),
+                                  ),
+                                  FittedBox(
+                                    fit: BoxFit.fitWidth,
+                                    child: Text(
+                                      "Scan",
+                                      style: GoogleFonts.pacifico(
+                                          color: Colors.black, fontSize: 25),
                                     ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                FittedBox(
-                                  fit: BoxFit.fitWidth,
-                                  child: Text(
-                                    'Version 1.0',
                                   ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Text(
+                                  'Version 1.0',
                                 ),
-                                SizedBox(
-                                  height: 8,
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Text(
+                                  'All In One Document Scanner',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Theme.of(context).accentColor),
                                 ),
-                                FittedBox(
-                                  fit: BoxFit.fitWidth,
-                                  child: Text(
-                                    'Developed by Sparsh Kishore Kumar',
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 14,
-                                        color: Theme.of(context).accentColor),
-                                  ),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Text(
+                                  "Developed on Flutter",
                                 ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                FittedBox(
-                                  fit: BoxFit.fitWidth,
-                                  child: Text(
-                                    "Developed on Flutter",
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        );
-                      });
-                };
+                        ),
+                      );
+                    });
 
                 // ...
               },
@@ -633,7 +625,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
           topBarButtonsColor: Colors.white70,
           cameraOverlayColor: Colors.black26,
           finderLineColor: Colors.red,
-          finderTextHintColor: Colors.cyanAccent,
+          finderTextHintColor: Colors.white,
           cancelButtonTitle: 'Cancel',
           enableCameraButtonTitle: 'camera enable',
           enableCameraExplanationText: 'explanation text',
@@ -644,12 +636,12 @@ class _MainPageWidgetState extends State<MainPageWidget> {
           barcodesCountText: '%d codes',
           fetchingStateText: 'might be not needed',
           noBarcodesTitle: 'nothing to see here',
-          barcodesCountTextColor: Colors.purple,
+          barcodesCountTextColor: Colors.white,
           finderAspectRatio: FinderAspectRatio(width: 3, height: 2),
-          topBarButtonsInactiveColor: Colors.orange,
-          detailsActionColor: Colors.yellow,
-          detailsBackgroundColor: Colors.amber,
-          detailsPrimaryColor: Colors.yellowAccent,
+          topBarButtonsInactiveColor: Colors.white,
+          detailsActionColor: Colors.white,
+          detailsBackgroundColor: Colors.blueAccent,
+          detailsPrimaryColor: Colors.white,
           finderLineWidth: 7,
           successBeepEnabled: true,
           // flashEnabled: true,
