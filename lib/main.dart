@@ -23,6 +23,7 @@ import 'package:scanbot_sdk_example_flutter/ui/progress_dialog.dart';
 import 'pages_repository.dart';
 import 'ui/menu_items.dart';
 import 'ui/utils.dart';
+import 'package:dcdg/dcdg.dart';
 
 /// true - if you need to enable encryption for example app
 bool shouldInitWithEncryption = false;
@@ -35,21 +36,21 @@ void main() => runApp(MyApp());
 // or may be terminated. You can get an unrestricted "no-strings-attached" 30 day trial license key for free.
 // Please submit the trial license form (https://scanbot.io/en/sdk/demo/trial) on our website by using
 // the app identifier "io.scanbot.example.sdk.flutter" of this example app or of your app.
-const SCANBOT_SDK_LICENSE_KEY = "T+/Le6fMmd55Fv+wqrmuVziU6bHDIj" +
-    "Qa4VBIpWNhkLpVdNdK9WOVV9W1TvvL" +
-    "LuJ6aSEcwJwpNcU/urvG8V2YDvxMGG" +
-    "wltG9MrqFeidMQOWqfL4eAfoooie0x" +
-    "qU1CpnROvqnF9lhE1OnCa/+Lfz8P3R" +
-    "lwliY/LIs1jG5PP8hlTt9gkrAlJe7C" +
-    "jCP1upED9d397oGpNdkO+GFkn7Vkfm" +
-    "VwBtqx6WSAksSkTzilP3Dlxh0HDXqS" +
-    "ApfG8DE1DvGUS2Hrkt9ZaB2V6dKSbA" +
-    "ZAVNZG1bGD5bV2g6w7WB6zyZHaj7ki" +
-    "xu2fA0ZxD/wMaTEQr0sxVmHlWkztL9" +
-    "cXRhRwrhRPBw==\nU2NhbmJvdFNESw" +
+const SCANBOT_SDK_LICENSE_KEY = "Sud7JuFmn4i4IPo2PwzZ+bcw4WM1jG" +
+    "3J8jZHo3dl5QE7l7z1aV6JmnSxctQ8" +
+    "kSMM6DH0EMJoOmVgOyPGEf1N7uhgOS" +
+    "ePt96ya1fw1xGWpn9onnsZDokIxkzx" +
+    "q44+zU9YItCW6ltKEM//Ufo1JrDbuM" +
+    "hefkqD5a6wRzZDDfLWvW9AEIH52utx" +
+    "dL3/NC2dwYOkZhNLNn5gs4bTE26CDG" +
+    "JcFhireHEzWew3tOBx6N28JPzaH72B" +
+    "/UTk4sjCgrzjWxLdelaRrMhmLceqQ3" +
+    "Vlsm5iVHe+1LdOSrjOgb7ydOp/cISj" +
+    "NROz3A/xUUXt2hE+tgI/mhnCRUQ0LU" +
+    "ZLVyFjpdrvcA==\nU2NhbmJvdFNESw" +
     "pjb20uZXhhbXBsZS5zY2FuYm90X29u" +
     "ZXNjYW5fZmx1dHRlcgoxNjIzMTEwMz" +
-    "k5CjU5MAoz\n";
+    "k5CjExNTU2NzgKMw==\n";
 
 Future<void> _initScanbotSdk() async {
   // Consider adjusting this optional storageBaseDirectory - see the comments below.
@@ -304,7 +305,41 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                     children: [
                       InkWell(
                         onTap: () {
-                          _startDocumentScanning();
+                          showModalBottomSheet<void>(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25.0),
+                            ),
+                            context: context,
+                            builder: (BuildContext context) {
+                              return Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xfffdfcfa),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: const Radius.circular(25.0),
+                                      topRight: const Radius.circular(25.0)),
+                                ),
+                                height: 200,
+                                child: ListView(
+                                  children: [
+                                    MenuItemWidget(
+                                      "Document Scanner",
+                                      endIcon: Icons.arrow_forward,
+                                      onTap: () {
+                                        _startDocumentScanning();
+                                      },
+                                    ),
+                                    MenuItemWidget(
+                                      "MRZ Scanner",
+                                      endIcon: Icons.arrow_forward,
+                                      onTap: () {
+                                        _startMRZScanner();
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
                         },
                         child: Column(
                           children: [
