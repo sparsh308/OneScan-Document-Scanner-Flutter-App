@@ -1,15 +1,6 @@
-# Scanbot SDK Example Flutter
-
-This example app shows how to integrate the [Scanbot SDK Flutter Plugin](https://pub.dev/packages/scanbot_sdk) on Android and iOS.
-
-For more details about the Plugin please see this [documentation](https://scanbotsdk.github.io/documentation/flutter/).
+![iphone-mockup-scene](https://user-images.githubusercontent.com/47140660/119092043-8d2f9d00-ba2b-11eb-90ce-a6e5468de51e.png)
 
 
-## What is Scanbot SDK?
-
-The Scanbot SDK brings scanning and document creation capabilities to your mobile apps.
-It contains modules which are individually licensable as license packages.
-For more details visit our website https://scanbot.io
 
 
 ## How to run this app
