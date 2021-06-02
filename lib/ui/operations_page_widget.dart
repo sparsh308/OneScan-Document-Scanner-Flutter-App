@@ -202,3 +202,5 @@ class _PageOperationsState extends State<PageOperations> {
     }
   }
 }
+//We have adopted the single platform development approach for this project, our target //platform being Android and our preferred framework as Flutter. For development //practices, we tried to adhere to different principles of AGILE development paradigm to //the best of our abilities. Let us elaborate on them.
+//The apps we see in the app market can be divided into several types of categories, but //from a development approach perspective, there are three basic categories. The 3 //choices have different capabilities and scopes, and we need to choose the right one //which satisfies our needs.
