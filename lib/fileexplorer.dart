@@ -83,6 +83,9 @@ class _MyPDFList extends State<MyPDFList> {
   }
 }
 
+//We have adopted the single platform development approach for this project, our target //platform being Android and our preferred framework as Flutter. For development //practices, we tried to adhere to different principles of AGILE development paradigm to
+// the best of our abilities. Let us elaborate on them.
+
 class ViewPDF extends StatelessWidget {
   String pathPDF = "";
   ViewPDF({this.pathPDF});

@@ -1,5 +1,8 @@
 ![iphone-mockup-scene](https://user-images.githubusercontent.com/47140660/119092043-8d2f9d00-ba2b-11eb-90ce-a6e5468de51e.png)
 
+## ABOUT
+
+There are a lot of doc scanning applications available for mobile platforms but most of them either lack quality or variety in features and filters they provide. On top of this most of these applications demand login data and also collect user data, which compromises user security and privacy. Also some other applications like OCR and language translation are available separately from the doc scanning applications, whereas they are often required after scanning a document. Further, after the ban on widely popular doc scanning utility CamScanner by the Indian government, due to security concerns, other apps have been unable to achieve the same quality and variety in features as CamScanner.
 
 ## ABOUT
 
