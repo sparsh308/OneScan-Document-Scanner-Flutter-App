@@ -7,7 +7,7 @@ There are a lot of doc scanning applications available for mobile platforms but 
 
 
 
-## How to run this app
+## How to run this app////////
 
 Install [Flutter](https://flutter.dev) and all required dev tools.
 
